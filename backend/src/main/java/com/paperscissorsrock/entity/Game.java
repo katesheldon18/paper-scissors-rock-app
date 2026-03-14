@@ -13,11 +13,11 @@ public class Game {
     private Long id;
 
     private Long userId;
-    private String result;
+    private Boolean result;
 
     protected Game() {}
 
-    public Game(Long userId, String result) {
+    public Game(Long userId, boolean result) {
         this.userId = userId;
         this.result = result;
     }
@@ -25,7 +25,7 @@ public class Game {
     @Override
     public String toString() {
         return String.format(
-            "Game[id=%d, userId=%d, result='%s']",
+            "Game[id=%d, userId=%d, result=%b]",
             id, userId, result);
     }
 
@@ -37,7 +37,7 @@ public class Game {
         return userId;
     }
 
-    public String getResult() {
+    public Boolean getResult() {
         return result;
     }
 }
