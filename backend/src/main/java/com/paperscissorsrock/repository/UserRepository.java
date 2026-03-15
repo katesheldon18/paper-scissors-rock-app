@@ -1,3 +1,5 @@
+// https://docs.spring.io/spring-data/jpa/reference/repositories/definition.html
+ 
 import org.springframework.data.repository.CrudRepository;
 import com.paperscissorsrock.entity.User;
 
