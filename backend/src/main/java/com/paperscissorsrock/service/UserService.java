@@ -1,6 +1,9 @@
+package com.paperscissorsrock.service;
+
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
+import java.util.Optional;
 import com.paperscissorsrock.repository.UserRepository;
 import com.paperscissorsrock.entity.User;
 
@@ -19,8 +22,8 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User getUserById(Long id) {
-        return userRepository.getReferenceById(id);
+    public Optional<User> getUserById(Long id) {
+        return userRepository.findById(id);
     }
 
     public User createUser(User user) {

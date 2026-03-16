@@ -1,6 +1,9 @@
+package com.paperscissorsrock.service;
+
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
+import java.util.Optional;
 import com.paperscissorsrock.repository.GameRepository;
 import com.paperscissorsrock.entity.Game;
 
@@ -14,8 +17,8 @@ public class GameService {
         return gameRepository.findAll();
     }
 
-    public Game getGameById(Long id) {
-        return gameRepository.getReferenceById(id);
+    public Optional<Game> getGameById(Long id) {
+        return gameRepository.findById(id);
     }
 
     public Game createGame(Game game) {
