@@ -1,4 +1,4 @@
-package com.paperscissorsrock.controller;
+package com.paperscissorsrock.paperscissorsrock.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,13 +12,13 @@ import com.paperscissorsrock.service.UserService;
 import com.paperscissorsrock.entity.User;
 
 @RestController
-RequestMapping("/users")
+@RequestMapping("/users")
 public class UserController {
 
     @Autowired
-    private UserService UserService;
+    private UserService userService;
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public Optional<User> getUserById(@PathVariable Long id) {
         return userService.getUserById(id);
     }
@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @PostMapping()
-    public User createUser(User user) {
+    public User createUser(@org.springframework.web.bind.annotation.RequestBody User user) {
         return userService.createUser(user);
     }
 }

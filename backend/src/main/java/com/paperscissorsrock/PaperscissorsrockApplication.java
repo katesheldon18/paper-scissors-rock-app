@@ -1,6 +1,6 @@
 // file auto generated from spring initialiser
 
-package com.paperscissorsrock.paperscissorsrock;
+package com.paperscissorsrock;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
