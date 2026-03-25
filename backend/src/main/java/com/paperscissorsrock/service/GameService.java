@@ -24,12 +24,4 @@ public class GameService {
     public Game createGame(Game game) {
         return gameRepository.save(game);
     }
-
-    public Game updateGame(Game game) {
-        return gameRepository.save(game);
-    }
-
-    public void removeGame(Long id) {
-        gameRepository.deleteById(id);
-    }
 }

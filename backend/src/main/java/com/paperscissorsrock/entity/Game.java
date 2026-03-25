@@ -13,7 +13,7 @@ public class Game {
     private Long id;
 
     private Long userId;
-    private Boolean result;
+    private boolean result;
 
     protected Game() {}
 
@@ -37,7 +37,7 @@ public class Game {
         return userId;
     }
 
-    public Boolean getResult() {
+    public boolean getResult() {
         return result;
     }
 }
