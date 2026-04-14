@@ -1,9 +1,11 @@
 import './App.css'
+import Leaderboard from './components/Leaderboard'
 
 function App() {
   return (
     <div>
       <h1>Paper Scissors Rock</h1>
+      <Leaderboard />
     </div>
   )
 }
