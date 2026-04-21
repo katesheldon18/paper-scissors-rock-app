@@ -13,20 +13,20 @@ public class Game {
     private Long id;
 
     private Long userId;
-    private boolean result;
+    private boolean win;
 
     protected Game() {}
 
-    public Game(Long userId, boolean result) {
+    public Game(Long userId, boolean win) {
         this.userId = userId;
-        this.result = result;
+        this.win = win;
     }
 
     @Override
     public String toString() {
         return String.format(
-            "Game[id=%d, userId=%d, result=%b]",
-            id, userId, result);
+            "Game[id=%d, userId=%d, win=%b]",
+            id, userId, win);
     }
 
     public Long getId() {
@@ -37,7 +37,7 @@ public class Game {
         return userId;
     }
 
-    public boolean getResult() {
-        return result;
+    public boolean isWin() {
+        return win;
     }
 }
